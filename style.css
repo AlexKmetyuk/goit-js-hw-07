@@ -1,0 +1,16 @@
+#gallery {
+  display: flex;
+  list-style: none;
+}
+
+.gallery__item {
+  width: 320px;
+}
+
+.gallery__item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.gallery__item img {
+  width: 100%;
+}
