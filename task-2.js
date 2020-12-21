@@ -6,6 +6,7 @@ const ingredients = [
   "Зелень",
   "Приправы",
 ];
+const listRef = document.querySelector("#ingredients");
 
 const createNewItem = (ingredient) => {
   const itemRef = document.createElement("li");
@@ -13,10 +14,4 @@ const createNewItem = (ingredient) => {
   return itemRef;
 };
 
-const mapped = ingredients.map((ingredient) => createNewItem(ingredient));
-
-console.log(mapped);
-
-const listRef = document.querySelector("#ingredients");
-
-listRef.append(...mapped);
+listRef.append(...ingredients.map((ingredient) => createNewItem(ingredient)));

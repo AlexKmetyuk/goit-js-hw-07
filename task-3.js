@@ -15,6 +15,8 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
+const galleryRef = document.querySelector("#gallery");
+
 
 const createPhotoList = (obj) => {
   const listItemRef = document.createElement("li");
@@ -29,8 +31,4 @@ const createPhotoList = (obj) => {
   return listItemRef;
 };
 
-const mapped = images.map((obj) => createPhotoList(obj));
-
-const galleryRef = document.querySelector("#gallery");
-
-galleryRef.append(...mapped);
+galleryRef.append(...images.map((obj) => createPhotoList(obj)));
